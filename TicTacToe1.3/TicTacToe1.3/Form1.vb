@@ -1,4 +1,5 @@
 ﻿Public Class Form1
+
     Dim Player1 As Char
     Dim Player2 As Char
     Dim Sieger1 As Object
@@ -29,6 +30,7 @@
 
         BtnStart.Enabled = False
         Player1 = "X"
+        Player2 = "O"
 
     End Sub
 
@@ -37,6 +39,7 @@
 
         BtnStart.Enabled = False
         Player2 = "O"
+        Player1 = "X"
 
     End Sub
 
