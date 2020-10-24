@@ -5,60 +5,27 @@
     Dim Sieger1 As Object
     Dim Sieger2 As Object
 
-    Public Function SpielerMakierung(Spielerbutton)
-
-        If BtnSpielerEins.Enabled = True Then
-
-            Spielerbutton.Text = Player1
-
-        Else
-            Spielerbutton.Text = Player2
-
-        End If
-
-        If Spielerbutton.Text = "X" Then
-            BtnSpielerEins.Enabled = False
-            BtnSpielerZwei.Enabled = True
-
-        Else
-            If Spielerbutton.Text = "O" Then
-                BtnSpielerZwei.Enabled = False
-                BtnSpielerEins.Enabled = True
-            End If
-
-        End If
-
-
-    End Function
-
-    Public Sub StatusButtons(Status As Boolean)
-
-        Button1.Enabled = Status
-        Button2.Enabled = Status
-        Button3.Enabled = Status
-        Button4.Enabled = Status
-        Button5.Enabled = Status
-        Button6.Enabled = Status
-        Button7.Enabled = Status
-        Button8.Enabled = Status
-        Button9.Enabled = Status
-
-    End Sub
-
 
     Private Sub BtnStart_Click(sender As Object, e As EventArgs) Handles BtnStart.Click
         BtnSpielerEins.Enabled = True
         BtnSpielerZwei.Enabled = True
         BtnNeustart.Enabled = True
 
-        StatusButtons(True)
+        Button1.Enabled = True
+        Button2.Enabled = True
+        Button3.Enabled = True
+        Button4.Enabled = True
+        Button5.Enabled = True
+        Button6.Enabled = True
+        Button7.Enabled = True
+        Button8.Enabled = True
+        Button9.Enabled = True
 
         MessageBox.Show("Welcher Spieler Beginnt?")
 
     End Sub
 
     Private Sub BtnSpielerEins_Click(sender As Object, e As EventArgs) Handles BtnSpielerEins.Click
-
         BtnSpielerZwei.Enabled = False
 
         BtnStart.Enabled = False
@@ -68,7 +35,6 @@
     End Sub
 
     Private Sub BtnSpielerZwei_Click(sender As Object, e As EventArgs) Handles BtnSpielerZwei.Click
-
         BtnSpielerEins.Enabled = False
 
         BtnStart.Enabled = False
@@ -94,21 +60,68 @@
         BtnSpielerEins.Enabled = False
         BtnSpielerZwei.Enabled = False
 
-        StatusButtons(False)
+        Button1.Enabled = False
+        Button2.Enabled = False
+        Button3.Enabled = False
+        Button4.Enabled = False
+        Button5.Enabled = False
+        Button6.Enabled = False
+        Button7.Enabled = False
+        Button8.Enabled = False
+        Button9.Enabled = False
+
 
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click, Button1.TextChanged
 
-        SpielerMakierung(Button1)
+
+        If BtnSpielerEins.Enabled = True Then
+
+            Button1.Text = Player1
+
+        Else
+            Button1.Text = Player2
+
+        End If
+
+        If Button1.Text = "X" Then
+            BtnSpielerEins.Enabled = False
+            BtnSpielerZwei.Enabled = True
+
+        Else
+            If Button1.Text = "O" Then
+                BtnSpielerZwei.Enabled = False
+                BtnSpielerEins.Enabled = True
+            End If
+
+        End If
 
         Button1.Enabled = False
 
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If BtnSpielerEins.Enabled = True Then
 
-        SpielerMakierung(Button2)
+            Button2.Text = Player1
+
+        Else
+            Button2.Text = Player2
+
+        End If
+
+        If Button2.Text = "X" Then
+            BtnSpielerEins.Enabled = False
+            BtnSpielerZwei.Enabled = True
+
+        Else
+            If Button2.Text = "O" Then
+                BtnSpielerZwei.Enabled = False
+                BtnSpielerEins.Enabled = True
+            End If
+
+        End If
 
         Button2.Enabled = False
 
@@ -117,56 +130,184 @@
 
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        If BtnSpielerEins.Enabled = True Then
 
-        SpielerMakierung(Button3)
+            Button3.Text = Player1
+
+        Else
+            Button3.Text = Player2
+
+        End If
+
+        If Button3.Text = "X" Then
+            BtnSpielerEins.Enabled = False
+            BtnSpielerZwei.Enabled = True
+
+        Else
+            If Button3.Text = "O" Then
+                BtnSpielerZwei.Enabled = False
+                BtnSpielerEins.Enabled = True
+            End If
+
+        End If
 
         Button3.Enabled = False
+
+
 
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        If BtnSpielerEins.Enabled = True Then
 
-        SpielerMakierung(Button4)
+            Button4.Text = Player1
+
+        Else
+            Button4.Text = Player2
+
+        End If
+
+        If Button4.Text = "X" Then
+            BtnSpielerEins.Enabled = False
+            BtnSpielerZwei.Enabled = True
+
+        Else
+            If Button4.Text = "O" Then
+                BtnSpielerZwei.Enabled = False
+                BtnSpielerEins.Enabled = True
+            End If
+
+        End If
 
         Button4.Enabled = False
 
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        If BtnSpielerEins.Enabled = True Then
 
-        SpielerMakierung(Button5)
+            Button5.Text = Player1
+
+        Else
+            Button5.Text = Player2
+
+        End If
+
+        If Button5.Text = "X" Then
+            BtnSpielerEins.Enabled = False
+            BtnSpielerZwei.Enabled = True
+
+        Else
+            If Button5.Text = "O" Then
+                BtnSpielerZwei.Enabled = False
+                BtnSpielerEins.Enabled = True
+            End If
+
+        End If
 
         Button5.Enabled = False
 
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        If BtnSpielerEins.Enabled = True Then
 
-        SpielerMakierung(Button6)
+            Button6.Text = Player1
+
+        Else
+            Button6.Text = Player2
+
+        End If
+
+        If Button6.Text = "X" Then
+            BtnSpielerEins.Enabled = False
+            BtnSpielerZwei.Enabled = True
+
+        Else
+            If Button6.Text = "O" Then
+                BtnSpielerZwei.Enabled = False
+                BtnSpielerEins.Enabled = True
+            End If
+
+        End If
 
         Button6.Enabled = False
 
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        If BtnSpielerEins.Enabled = True Then
 
-        SpielerMakierung(Button7)
+            Button7.Text = Player1
+
+        Else
+            Button7.Text = Player2
+
+        End If
+
+        If Button7.Text = "X" Then
+            BtnSpielerEins.Enabled = False
+            BtnSpielerZwei.Enabled = True
+
+        Else
+            If Button7.Text = "O" Then
+                BtnSpielerZwei.Enabled = False
+                BtnSpielerEins.Enabled = True
+            End If
+
+        End If
 
         Button7.Enabled = False
 
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        If BtnSpielerEins.Enabled = True Then
 
-        SpielerMakierung(Button8)
+            Button8.Text = Player1
+
+        Else
+            Button8.Text = Player2
+
+        End If
+
+        If Button8.Text = "X" Then
+            BtnSpielerEins.Enabled = False
+            BtnSpielerZwei.Enabled = True
+
+        Else
+            If Button8.Text = "O" Then
+                BtnSpielerZwei.Enabled = False
+                BtnSpielerEins.Enabled = True
+            End If
+
+        End If
 
         Button8.Enabled = False
 
     End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        If BtnSpielerEins.Enabled = True Then
 
-        SpielerMakierung(Button9)
+            Button9.Text = Player1
+
+        Else
+            Button9.Text = Player2
+
+        End If
+
+        If Button9.Text = "X" Then
+            BtnSpielerEins.Enabled = False
+            BtnSpielerZwei.Enabled = True
+
+        Else
+            If Button9.Text = "O" Then
+                BtnSpielerZwei.Enabled = False
+                BtnSpielerEins.Enabled = True
+            End If
+
+        End If
 
         Button9.Enabled = False
 
@@ -182,6 +323,8 @@
     End Sub
 
     Private Sub BtnErgebnis_Click(sender As Object, e As EventArgs) Handles BtnErgebnis.Click
+
+
 
         If Button1.Text = "X" AndAlso Button2.Text = "X" AndAlso Button3.Text = "X" Then
             MessageBox.Show("Spieler1 gewinnt!")
@@ -235,10 +378,8 @@
 
         Else
             MessageBox.Show("Unentschieden!")
-
         End If
 
-        StatusButtons(False)
 
     End Sub
 End Class
